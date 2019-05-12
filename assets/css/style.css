@@ -1,0 +1,57 @@
+/* GENERAL STYLES */
+body {
+  margin: 0;
+}
+
+/* NAVBAR STYLES */
+.topnav {
+  display: flex;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.topLeft {
+  list-style: none;
+}
+
+.topRight {
+  list-style: none;
+  display: inline-flex;
+  margin-left: auto;
+}
+
+.rightNavItem {
+  margin: 0 10px;
+}
+
+
+/* ABOUT STYLES */
+.about {
+  height: calc(100vh - 50px);
+  background-color: red;
+  margin-top: 50px;
+}
+
+
+/* SKILLS STYLES */
+.skills {
+  height: 100vh;
+  background-color: blue;
+}
+
+
+/* PORTFOLIO STYLES */
+.portfolio {
+  height: 100vh;
+  background-color: green;
+}
+
+
+/* CONTACT STYLES */
+.contact {
+  height: 100vh;
+  background-color: black;
+}
