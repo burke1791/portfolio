@@ -13,18 +13,26 @@ body {
   background-color: white;
 }
 
-.topLeft {
+nav.topnav > ul {
+  padding: 0;
   list-style: none;
+}
+
+.topLeft {
+  margin: 0;
 }
 
 .topRight {
-  list-style: none;
   display: inline-flex;
-  margin-left: auto;
+  margin: 0 0 0 auto;
 }
 
-.rightNavItem {
+nav.topnav > ul > li {
   margin: 0 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
