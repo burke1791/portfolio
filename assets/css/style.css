@@ -1,9 +1,18 @@
 /* GENERAL STYLES */
+* {
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
 
 /* NAVBAR STYLES */
+li > a {
+  text-decoration: none;
+}
+
 .topnav {
   display: flex;
   height: 50px;
@@ -13,7 +22,7 @@ body {
   background-color: white;
 }
 
-nav.topnav > ul {
+nav > ul {
   padding: 0;
   list-style: none;
 }
@@ -27,18 +36,66 @@ nav.topnav > ul {
   margin: 0 0 0 auto;
 }
 
-nav.topnav > ul > li {
+nav > ul > li {
   margin: 0 10px;
+  padding: 10px 0;
   height: 100%;
+  min-width: 50px;
+  max-width: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+}
+
+.botnav {
+  display: flex;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.botMid {
+  margin: 0 auto;
+  display: inline-flex;
+}
+
+.navLinkIcon {
+  width: auto;
+  max-height: 30px;
+}
+
+.topRight li b,
+.botMid li b {
+  /* font-size: 0.2em; */
+  display: none;
+}
+
+.topRight li:hover b,
+.botMid li:hover b {
+  /* font-size: 1em; */
+  display: inline-block;
+}
+
+.rightNavItem:hover img,
+.botNavItem:hover img {
+  display: none;
+}
+
+
+/* CONTENT STYLES */
+.about,
+.skills,
+.portfolio,
+.contact {
+  height: calc(100vh - 100px);
 }
 
 
 /* ABOUT STYLES */
 .about {
-  height: calc(100vh - 50px);
   background-color: red;
   margin-top: 50px;
 }
@@ -46,20 +103,18 @@ nav.topnav > ul > li {
 
 /* SKILLS STYLES */
 .skills {
-  height: 100vh;
   background-color: blue;
 }
 
 
 /* PORTFOLIO STYLES */
 .portfolio {
-  height: 100vh;
   background-color: green;
 }
 
 
 /* CONTACT STYLES */
 .contact {
-  height: 100vh;
   background-color: black;
+  margin-bottom: 50px;
 }
