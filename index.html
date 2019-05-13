@@ -12,42 +12,9 @@
   <title>Chris Burke | Portfolio</title>
 </head>
 
-<body>
-  <nav class='topnav'>
-    <ul class='topLeft'>
-      <li class='leftNavItem'>
-        <a href='#'><b>Chris Burke</b></a>
-      </li>
-    </ul>
-    <ul class='topRight'>
-      <li class='rightNavItem'>
-        <a href='' class='rightNavLink' id='aboutLink' data-scrollTo='aboutSection'>
-          <img src='assets/images/home_light.png' class='navLinkIcon'>
-          <b>About</b>
-        </a>
-      </li>
-      <li class='rightNavItem'>
-        <a href='' class='rightNavLink' id='skillsLink' data-scrollTo='skillsSection'>
-          <img src='assets/images/skills_light.png' class='navLinkIcon'>
-          <b>Skills</b>
-        </a>
-      </li>
-      <li class='rightNavItem'>
-        <a href='' class='rightNavLink' id='portfolioLink' data-scrollTo='portfolioSection'>
-          <img src='assets/images/portfolio_light.png' class='navLinkIcon'>
-          <b>Portfolio</b>
-        </a>
-      </li>
-      <li class='rightNavItem'>
-        <a href='' class='rightNavLink' id='contactLink' data-scrollTo='contactSection'>
-          <img src='assets/images/contact_light.png' class='navLinkIcon'>
-          <b>Contact</b>
-        </a>
-      </li>
-    </ul>
-  </nav>
+<body class='light'>
 
-  <div class='about light' id='aboutSection'>
+  <div class='about' id='aboutSection'>
     <div class='aboutContent'>
       <div class='name'>
         <h1>Chris Burke</h1>
@@ -68,12 +35,12 @@
         <h2>Front End Web Developer</h2>
       </div>
       <div class='contactJump'>
-        <button type='button'>Get in touch!</button>
+        <button type='button' class='jumpLink' data-scrollTo='contactSection'>Get in touch!</button>
       </div>
     </div>
   </div>
 
-  <div class='skills light' id='skillsSection'>
+  <div class='skills' id='skillsSection'>
     <div class='skillsContent'>
       <div class='skillsTitle'>
         <h1>Web Technologies</h1>
@@ -127,12 +94,76 @@
   </div>
 
   <div class='portfolio' id='portfolioSection'>
-
+    <div class='portfolioContent'>
+      <div class='portfolioTitle'>
+        <h1>Portfolio</h1>
+      </div>
+      <div class='portfolioGrid'>
+        <div class='portfolioItemContainer'>
+          <a href='' class='portfolioItemLink'>
+            <img src='assets/images/calcutta-react.png' class='portfolioItemImg'>
+            <div class='portfolioItemImgOverlay'>
+              <span class='portfolioItemText'>College Basketball Calcutta Tournament</span>
+            </div>
+          </a>
+        </div>
+        <div class='portfolioItemContainer'>
+          <a href='' class='portfolioItemLink'>
+            <img src='assets/images/B1G_hangman.png' class='portfolioItemImg'>
+            <div class='portfolioItemImgOverlay'>
+              <span class='portfolioItemText'>Big Ten Hangman Game</span>
+            </div>
+          </a>
+        </div>
+        <div class='portfolioItemContainer'>
+          <a href='' class='portfolioItemLink'>
+            <img src='assets/images/flockatime.png' class='portfolioItemImg'>
+            <div class='portfolioItemImgOverlay'>
+              <span class='portfolioItemText'>Flockatime</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class='contact' id='contactSection'>
 
   </div>
+
+  <nav class='topnav'>
+    <ul class='topLeft'>
+      <li class='leftNavItem'>
+        <a href='#'><b>Chris Burke</b></a>
+      </li>
+    </ul>
+    <ul class='topRight'>
+      <li class='rightNavItem'>
+        <a href='' class='rightNavLink jumpLink' id='aboutLink' data-scrollTo='aboutSection'>
+          <img src='assets/images/home_light.png' class='navLinkIcon'>
+          <b>About</b>
+        </a>
+      </li>
+      <li class='rightNavItem'>
+        <a href='' class='rightNavLink jumpLink' id='skillsLink' data-scrollTo='skillsSection'>
+          <img src='assets/images/skills_light.png' class='navLinkIcon'>
+          <b>Skills</b>
+        </a>
+      </li>
+      <li class='rightNavItem'>
+        <a href='' class='rightNavLink jumpLink' id='portfolioLink' data-scrollTo='portfolioSection'>
+          <img src='assets/images/portfolio_light.png' class='navLinkIcon'>
+          <b>Portfolio</b>
+        </a>
+      </li>
+      <li class='rightNavItem'>
+        <a href='' class='rightNavLink jumpLink' id='contactLink' data-scrollTo='contactSection'>
+          <img src='assets/images/contact_light.png' class='navLinkIcon'>
+          <b>Contact</b>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
   <nav class='botnav'>
     <ul class='botMid'>

@@ -1,5 +1,5 @@
 $(function() {
-  $('.rightNavLink').click(function(event) {
+  $('.jumpLink').click(function(event) {
     console.log('clicked link');
     event.preventDefault();
     var targetId = $(this).attr('data-scrollTo');
