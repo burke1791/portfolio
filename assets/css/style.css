@@ -156,7 +156,6 @@ nav > ul > li {
 
 /* SKILLS STYLES */
 .skills {
-  background-color: blue;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -164,6 +163,8 @@ nav > ul > li {
 }
 
 .skillsContent {
+  width: 100%;
+  padding: 0 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -173,6 +174,33 @@ nav > ul > li {
 .skillsTitle h1 {
   font-size: 64px;
   margin: 10px;
+}
+
+.technologyGrid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.techItemContainer {
+  background-color: #fff;
+  width: 256px;
+  height: 256px;
+  border-radius: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.techItemContainer span {
+  display: none;
+}
+
+.techLogoImg {
+  width: 128px;
+  height: auto;
 }
 
 
