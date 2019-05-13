@@ -17,14 +17,24 @@ a {
   color: inherit;
 }
 
-.light {
+.light,
+.nav-dark {
   background-color: #e8f4fc;
   color: #2b536f;
 }
 
-.dark {
+.dark,
+.nav-light {
   background-color: #2b536f;
   color: #e8f4fc;
+}
+
+button.light {
+  border: 1px solid #2b536f;
+}
+
+button.dark {
+  border: 1px solid #e8f4fc;
 }
 
 /* NAVBAR STYLES */
@@ -38,7 +48,6 @@ li > a {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: white;
 }
 
 nav > ul {
@@ -67,13 +76,17 @@ nav > ul > li {
   text-align: center;
 }
 
+.brand {
+  max-width: initial;
+  font-size: 32px;
+}
+
 .botnav {
   display: flex;
   height: 50px;
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: white;
 }
 
 .botMid {
@@ -82,8 +95,8 @@ nav > ul > li {
 }
 
 .navLinkIcon {
-  width: auto;
   max-height: 30px;
+  max-width: 30px;
 }
 
 .topRight li b,
@@ -101,6 +114,10 @@ nav > ul > li {
 .rightNavItem:hover img,
 .botNavItem:hover img {
   display: none;
+}
+
+#light-dark-toggle:hover {
+  cursor: pointer;
 }
 
 
@@ -176,7 +193,6 @@ nav > ul > li {
 }
 
 button.jumpLink {
-  border: 1px solid #2b536f;
   padding: 15px;
   font-size: 24px;
   border-radius: 7px;
@@ -287,3 +303,7 @@ button.jumpLink:hover {
 .contactContent {
   text-align: center;
 }
+
+
+/* MEDIA QUERIES */
+/* 600px 900px 1200px 1800px */

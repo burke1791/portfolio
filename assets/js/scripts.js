@@ -1,4 +1,7 @@
 $(function() {
+  let fadeElementClasses = ['about', 'skills', 'portfolio', 'contact'];
+  let lightDarkIdentifiers = ['getInTouch']; // list of ids to toggle light/dark theme
+  
   $('.jumpLink').click(function(event) {
     console.log('clicked link');
     event.preventDefault();
@@ -15,11 +18,19 @@ $(function() {
     }, 0);
   });
 
-  $(window).scroll(function() {
-    var pageTop = $(document).scrollTop();
-    var pageBottom = pageTop + $(window).height();
+  $('#light-dark-toggle').click(function() {
+    var state = $(this).attr('data-state');
+    if (state === 'light') {
+      toggleLightDark('dark', 'light')
+    } else {
+      toggleLightDark('light', 'dark');
+    }
+  });
 
-    let fadeElementClasses = ['about', 'skills', 'portfolio', 'contact'];
+  $(window).scroll(handleFadeEffects);
+
+  function handleFadeEffects() {
+    var pageTop = $(document).scrollTop();
 
     for (var className of fadeElementClasses) {
       let elTop = $('.' + className).position().top;
@@ -31,7 +42,25 @@ $(function() {
         fadeOut(elTop, elHeight, pageTop, className);
       }
     }
-  });
+  }
+
+  function toggleLightDark(newState, oldState) {
+    var newSrc = $('#light-dark-toggle').attr('data-' + newState);
+    $('#light-dark-toggle').attr('src', newSrc);
+    $('#light-dark-toggle').attr('data-state', newState);
+
+    $('body').attr('class', newState);
+
+    $('#topNavBar').removeClass('nav-' + oldState);
+    $('#botNavBar').removeClass('nav-' + oldState);
+    $('#topNavBar').addClass('nav-' + newState);
+    $('#botNavBar').addClass('nav-' + newState);
+
+    for (id of lightDarkIdentifiers) {
+      $('#' + id).removeClass(oldState);
+      $('#' + id).addClass(newState);
+    }
+  }
 
   function fadeIn(elTop, elHeight, pageTop, className) {
     let opacity = 1 - (elTop - pageTop) / elHeight * 1.5;
@@ -42,4 +71,6 @@ $(function() {
     let opacity = 1 - (pageTop - elTop) / elHeight * 1.5;
     $('.' + className + 'Content').css('opacity', opacity);
   }
+
+  handleFadeEffects();
 })

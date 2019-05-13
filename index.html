@@ -26,7 +26,7 @@
           </a>
         </div>
         <div class='social'>
-          <a href='' class='socialLink'>
+          <a href='https://github.com/burke1791' class='socialLink'>
             <img src='assets/images/github_light.png' class='socialLinkIcon'>
           </a>
         </div>
@@ -35,7 +35,7 @@
         <h2>Front End Web Developer</h2>
       </div>
       <div class='contactJump'>
-        <button type='button' class='jumpLink light' data-scrollTo='contactSection'>Get in touch!</button>
+        <button type='button' class='jumpLink light' id='getInTouch' data-scrollTo='contactSection'>Get in touch!</button>
       </div>
     </div>
   </div>
@@ -143,10 +143,10 @@
     </div>
   </div>
 
-  <nav class='topnav'>
+  <nav class='topnav nav-light' id='topNavBar'>
     <ul class='topLeft'>
-      <li class='leftNavItem'>
-        <a href='#'><b>Chris Burke</b></a>
+      <li class='leftNavItem brand'>
+        <a href='#' class='brand'><b>Chris Burke</b></a>
       </li>
     </ul>
     <ul class='topRight'>
@@ -177,19 +177,24 @@
     </ul>
   </nav>
 
-  <nav class='botnav'>
+  <nav class='botnav nav-light' id='botNavBar'>
     <ul class='botMid'>
       <li class='botNavItem'>
-        <a href='' class='botNavLink'>
+        <a href='https://www.linkedin.com/in/christopher-burke-1b6ba284/' target='_blank' class='botNavLink'>
           <img src='assets/images/linkedin_light.png' class='navLinkIcon'>
           <b>LinkedIn</b>
         </a>
       </li>
       <li class='botNavItem'>
-        <a href='' class='botNavLink'>
+        <a href='https://github.com/burke1791' target='_blank' class='botNavLink'>
           <img src='assets/images/github_light.png' class='navLinkIcon'>
           <b>GitHub</b>
         </a>
+      </li>
+    </ul>
+    <ul class='botRight'>
+      <li class='botRightNavItem'>
+        <img src='assets/images/moon_light.png' data-state='light' data-light='assets/images/moon_light.png' data-dark='assets/images/sun_dark.png' class='navLinkIcon' id='light-dark-toggle'>
       </li>
     </ul>
   </nav>
