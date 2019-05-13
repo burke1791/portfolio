@@ -13,5 +13,33 @@ $(function() {
     $('html, body').animate({
       scrollTop: target.offset().top - 50
     }, 0);
-  })
+  });
+
+  $(window).scroll(function() {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height();
+
+    let fadeElementClasses = ['about', 'skills', 'portfolio', 'contact'];
+
+    for (var className of fadeElementClasses) {
+      let elTop = $('.' + className).position().top;
+      let elHeight = $('.' + className).height();
+
+      if (elTop > pageTop) {
+        fadeIn(elTop, elHeight, pageTop, className);
+      } else {
+        fadeOut(elTop, elHeight, pageTop, className);
+      }
+    }
+  });
+
+  function fadeIn(elTop, elHeight, pageTop, className) {
+    let opacity = 1 - (elTop - pageTop) / elHeight * 1.5;
+    $('.' + className + 'Content').css('opacity', opacity);
+  }
+
+  function fadeOut(elTop, elHeight, pageTop, className) {
+    let opacity = 1 - (pageTop - elTop) / elHeight * 1.5;
+    $('.' + className + 'Content').css('opacity', opacity);
+  }
 })

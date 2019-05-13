@@ -2,6 +2,7 @@
 * {
   font-family: 'Courier New', Courier, monospace;
   box-sizing: border-box;
+  font-weight: 100;
 }
 
 html {
@@ -10,6 +11,16 @@ html {
 
 body {
   margin: 0;
+}
+
+.light {
+  background-color: #e8f4fc;
+  color: #2b536f;
+}
+
+.dark {
+  background-color: #2b536f;
+  color: #e8f4fc;
 }
 
 /* NAVBAR STYLES */
@@ -100,14 +111,68 @@ nav > ul > li {
 
 /* ABOUT STYLES */
 .about {
-  background-color: red;
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name h1 {
+  font-size: 64px;
+  margin: 10px;
+}
+
+.socialIcons {
+  display: flex;
+  flex-direction: row;
+}
+
+.socialIcons .social {
+  margin: 0 20px;
+}
+
+.socialLink {
+  text-decoration: none;
+}
+
+.socialLink img {
+  max-width: 30px;
+  height: auto;
+}
+
+.title h2 {
+  font-size: 32px;
+  margin: 10px;
 }
 
 
 /* SKILLS STYLES */
 .skills {
   background-color: blue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillsContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillsTitle h1 {
+  font-size: 64px;
+  margin: 10px;
 }
 
 
