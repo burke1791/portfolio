@@ -138,6 +138,8 @@ nav > ul > li {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 0 100px;
 }
 
 
@@ -171,6 +173,17 @@ nav > ul > li {
 .title h2 {
   font-size: 32px;
   margin: 10px;
+}
+
+button.jumpLink {
+  border: 1px solid #2b536f;
+  padding: 15px;
+  font-size: 24px;
+  border-radius: 7px;
+}
+
+button.jumpLink:hover {
+  cursor: pointer;
 }
 
 
@@ -269,4 +282,8 @@ nav > ul > li {
 /* CONTACT STYLES */
 .contact {
   margin-bottom: 50px;
+}
+
+.contactContent {
+  text-align: center;
 }
