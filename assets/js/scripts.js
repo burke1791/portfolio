@@ -36,7 +36,7 @@ $(function () {
     var pageTop = $(document).scrollTop();
     var docHeight = $(document).height();
     var windowHeight = $(window).height();
-    handleFadeEffects(pageTop);
+    handleFadeEffects(pageTop, windowHeight);
     if ($(window).width() < 600) {
       handleMobileScroll(pageTop, docHeight, windowHeight);
     }
@@ -49,9 +49,6 @@ $(function () {
       $('#topNavBar').css('top', -50);
     }
 
-    console.log(pageTop);
-    console.log(docHeight - windowHeight);
-
     if (pageTop < 0) {
       prevScrollPos = 0;
     } else if (pageTop >= (docHeight - windowHeight)) {
@@ -62,24 +59,29 @@ $(function () {
     
   }
 
-  function handleFadeEffects(pageTop) {
+  function handleFadeEffects(pageTop, windowHeight) {
     for (var className of fadeElementClasses) {
       let elTop = $('.' + className).position().top;
-      let elHeight = $('.' + className).height();
+      let elHeight = $('.' + className).outerHeight();
+      let elBot = elTop + elHeight;
+      let pageBot = pageTop + windowHeight;
+
+      // if (className === 'skills') {
+      //   console.log(elBot, pageBot);
+      //   console.log(elHeight);
+      // }
 
       if (elTop > pageTop) {
         fadeIn(elTop, elHeight, pageTop, className);
+      } else if (elTop <= pageTop && elBot >= pageBot) {
+        noFade(className);
       } else {
-        fadeOut(elTop, elHeight, pageTop, className);
+        fadeOut(elBot, elHeight, pageBot, className);
       }
     }
   }
 
   function toggleLightDark(newState, oldState) {
-    // var newSrc = $('#light-dark-toggle').attr('data-' + newState);
-    // $('#light-dark-toggle').attr('src', newSrc);
-    // $('#light-dark-toggle').attr('data-state', newState);
-
     $('body').attr('class', newState);
 
     // navbars are separate because their color themes are opposite of the semantic light/dark
@@ -101,13 +103,20 @@ $(function () {
   }
 
   function fadeIn(elTop, elHeight, pageTop, className) {
-    let opacity = 1 - (elTop - pageTop) / elHeight * 1.5;
+    // if (className === 'skills') {
+    //   console.log(elTop, pageTop);
+    // }
+    let opacity = 1 - (elTop - pageTop) / elHeight * 1.2;
     $('.' + className + 'Content').css('opacity', opacity);
   }
 
-  function fadeOut(elTop, elHeight, pageTop, className) {
-    let opacity = 1 - (pageTop - elTop) / elHeight * 1.5;
+  function fadeOut(elBot, elHeight, pageBot, className) {
+    let opacity = 1 - (pageBot - elBot) / elHeight * 1.2;
     $('.' + className + 'Content').css('opacity', opacity);
+  }
+
+  function noFade(className) {
+    $('.' + className + 'Content').css('opacity', 1);
   }
 
   handleFadeEffects();

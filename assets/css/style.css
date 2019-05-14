@@ -143,7 +143,9 @@ nav > ul > li {
 .skills,
 .portfolio,
 .contact {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
+  padding: 75px 0;
+  /* height: calc(100vh - 100px); */
   text-align: center;
 }
 
