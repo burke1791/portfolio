@@ -1,6 +1,7 @@
 $(function() {
   let fadeElementClasses = ['about', 'skills', 'portfolio', 'contact'];
   let lightDarkIdentifiers = ['getInTouch']; // list of ids to toggle light/dark theme
+  let lightDarkImgElements = ['linkedInBotNav', 'light-dark-toggle', 'githubBotNav', 'linkedInAbout', 'githubAbout', 'aboutTopNav', 'skillsTopNav', 'portfolioTopNav', 'contactTopNav']
   
   $('.jumpLink').click(function(event) {
     console.log('clicked link');
@@ -45,16 +46,23 @@ $(function() {
   }
 
   function toggleLightDark(newState, oldState) {
-    var newSrc = $('#light-dark-toggle').attr('data-' + newState);
-    $('#light-dark-toggle').attr('src', newSrc);
-    $('#light-dark-toggle').attr('data-state', newState);
+    // var newSrc = $('#light-dark-toggle').attr('data-' + newState);
+    // $('#light-dark-toggle').attr('src', newSrc);
+    // $('#light-dark-toggle').attr('data-state', newState);
 
     $('body').attr('class', newState);
 
+    // navbars are separate because their color themes are opposite of the semantic light/dark
     $('#topNavBar').removeClass('nav-' + oldState);
     $('#botNavBar').removeClass('nav-' + oldState);
     $('#topNavBar').addClass('nav-' + newState);
     $('#botNavBar').addClass('nav-' + newState);
+
+    for (id of lightDarkImgElements) {
+      var newSrc = $('#' + id).attr('data-' + newState);
+      $('#' + id).attr('src', newSrc);
+      $('#' + id).attr('data-state', newState);
+    }
 
     for (id of lightDarkIdentifiers) {
       $('#' + id).removeClass(oldState);
