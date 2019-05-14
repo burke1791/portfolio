@@ -13,11 +13,12 @@
 }
 
 .rightNavItem {
-  display: none;
+  /* display: none; */
+  margin: 0;
 }
 
 .rightNavMenu {
-  display: inline;
+  /* display: inline; */
 }
 
 .botnav {
@@ -86,6 +87,10 @@
 .portfolioItemImg {
   width: 100%;
   height: auto;
+}
+
+.portfolioItemContainer {
+  margin: 10px 0;
 }
 
 /* CONTACT STYLES */

@@ -6,13 +6,22 @@ $(function () {
   $('.jumpLink').click(function (event) {
     console.log('clicked link');
     event.preventDefault();
-    var targetId = $(this).attr('data-scrollTo');
-    var target = $('#' + targetId);
 
-    var options = {
-      duration: 1000,
-      easing: 'linear'
-    };
+    if ($(window).width() < 600) {
+      var targetId = $(this).attr('data-scrollToResponsive');
+      var target = $('#' + targetId);
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 0);
+    } else {
+      var targetId = $(this).attr('data-scrollTo');
+      var target = $('#' + targetId);
+      $('html, body').animate({
+        scrollTop: target.offset().top - 50
+      }, 0);
+    }
+
+    var target = $('#' + targetId);
 
     $('html, body').animate({
       scrollTop: target.offset().top - 50
@@ -56,7 +65,7 @@ $(function () {
     } else {
       prevScrollPos = pageTop;
     }
-    
+
   }
 
   function handleFadeEffects(pageTop, windowHeight) {
