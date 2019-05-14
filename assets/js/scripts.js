@@ -1,9 +1,9 @@
-$(function() {
+$(function () {
   let fadeElementClasses = ['about', 'skills', 'portfolio', 'contact'];
   let lightDarkIdentifiers = ['getInTouch']; // list of ids to toggle light/dark theme
   let lightDarkImgElements = ['linkedInBotNav', 'light-dark-toggle', 'githubBotNav', 'linkedInAbout', 'githubAbout', 'aboutTopNav', 'skillsTopNav', 'portfolioTopNav', 'contactTopNav']
-  
-  $('.jumpLink').click(function(event) {
+
+  $('.jumpLink').click(function (event) {
     console.log('clicked link');
     event.preventDefault();
     var targetId = $(this).attr('data-scrollTo');
@@ -19,7 +19,7 @@ $(function() {
     }, 0);
   });
 
-  $('#light-dark-toggle').click(function() {
+  $('#light-dark-toggle').click(function () {
     var state = $(this).attr('data-state');
     if (state === 'light') {
       toggleLightDark('dark', 'light')
@@ -28,11 +28,41 @@ $(function() {
     }
   });
 
-  $(window).scroll(handleFadeEffects);
+  $(window).scroll(handleScrollEffects);
 
-  function handleFadeEffects() {
+  var prevScrollPos = $(window).scrollTop();
+
+  function handleScrollEffects() {
     var pageTop = $(document).scrollTop();
+    var docHeight = $(document).height();
+    var windowHeight = $(window).height();
+    handleFadeEffects(pageTop);
+    if ($(window).width() < 600) {
+      handleMobileScroll(pageTop, docHeight, windowHeight);
+    }
+  }
 
+  function handleMobileScroll(pageTop, docHeight, windowHeight) {
+    if (prevScrollPos >= pageTop) {
+      $('#topNavBar').css('top', 0);
+    } else {
+      $('#topNavBar').css('top', -50);
+    }
+
+    console.log(pageTop);
+    console.log(docHeight - windowHeight);
+
+    if (pageTop < 0) {
+      prevScrollPos = 0;
+    } else if (pageTop >= (docHeight - windowHeight)) {
+      prevScrollPos = docHeight - windowHeight;
+    } else {
+      prevScrollPos = pageTop;
+    }
+    
+  }
+
+  function handleFadeEffects(pageTop) {
     for (var className of fadeElementClasses) {
       let elTop = $('.' + className).position().top;
       let elHeight = $('.' + className).height();
