@@ -39,6 +39,13 @@ hr {
 }
 
 /* CONTENT STYLES */
+.about,
+.skills,
+.portfolio,
+.contact {
+  min-height: calc(100vh - 50px);
+}
+
 .aboutContent,
 .skillsContent,
 .portfolioContent,

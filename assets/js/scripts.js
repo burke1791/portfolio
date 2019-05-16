@@ -73,10 +73,17 @@ $(function () {
   function handleFadeEffects(pageTop, windowHeight) {
     if (window.location.pathname == '/index.html') {
       for (var className of fadeElementClasses) {
+        // className += 'Content';
         let elTop = $('.' + className).position().top;
         let elHeight = $('.' + className).outerHeight();
         let elBot = elTop + elHeight;
         let pageBot = pageTop + windowHeight;
+
+        if (className === 'about') {
+          console.log(elTop, pageTop);
+          console.log(elBot, pageBot);
+          console.log('-----------');
+        }
   
         if (elTop > pageTop) {
           fadeIn(elTop, elHeight, pageTop, className);
@@ -111,20 +118,25 @@ $(function () {
   }
 
   function fadeIn(elTop, elHeight, pageTop, className) {
-    // if (className === 'skills') {
-    //   console.log(elTop, pageTop);
-    // }
+    if (className == 'about') {
+      console.log(elTop, pageTop);
+    }
     let opacity = 1 - (elTop - pageTop) / elHeight * 1.2;
-    $('.' + className + 'Content').css('opacity', opacity);
+    setOpacity(className, opacity);
   }
 
   function fadeOut(elBot, elHeight, pageBot, className) {
     let opacity = 1 - (pageBot - elBot) / elHeight * 1.2;
-    $('.' + className + 'Content').css('opacity', opacity);
+    setOpacity(className, opacity);
   }
 
   function noFade(className) {
-    $('.' + className + 'Content').css('opacity', 1);
+    setOpacity(className, 1);
+  }
+
+  function setOpacity(className, opacity) {
+    $('.' + className + 'Content').css('opacity', opacity);
+    // $('.' + className).css('opacity', opacity);
   }
 
   function checkLocalStorageForThemeSetting() {
