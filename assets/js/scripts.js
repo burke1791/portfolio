@@ -31,9 +31,11 @@ $(function () {
   $('#light-dark-toggle').click(function () {
     var state = $(this).attr('data-state');
     if (state === 'light') {
-      toggleLightDark('dark', 'light')
+      toggleLightDark('dark', 'light');
+      localStorage.setItem('theme', 'dark');
     } else {
       toggleLightDark('light', 'dark');
+      localStorage.setItem('theme', 'light');
     }
   });
 
@@ -128,5 +130,16 @@ $(function () {
     $('.' + className + 'Content').css('opacity', 1);
   }
 
+  function checkLocalStorageForThemeSetting() {
+    let theme = localStorage.getItem('theme');
+    console.log(theme);
+    if (!theme) {
+      theme = 'light';
+    } else if (theme === 'dark') {
+      toggleLightDark(theme, 'light');
+    }
+  }
+
+  checkLocalStorageForThemeSetting();
   handleFadeEffects();
 })
