@@ -1,6 +1,6 @@
 $(function () {
   let fadeElementClasses = ['about', 'skills', 'portfolio', 'contact'];
-  let lightDarkIdentifiers = ['getInTouch']; // list of ids to toggle light/dark theme
+  let lightDarkIdentifiers = ['getInTouch', 'calcuttaBtn', 'hangmanBtn', 'flockaBtn']; // list of ids to toggle light/dark theme
   let lightDarkImgElements = ['linkedInBotNav', 'light-dark-toggle', 'githubBotNav', 'linkedInAbout', 'githubAbout', 'aboutTopNav', 'skillsTopNav', 'portfolioTopNav', 'contactTopNav']
 
   $('.jumpLink').click(function (event) {
