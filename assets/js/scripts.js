@@ -73,24 +73,20 @@ $(function () {
   function handleFadeEffects(pageTop, windowHeight) {
     if (window.location.pathname == '/index.html') {
       for (var className of fadeElementClasses) {
-        // className += 'Content';
         let elTop = $('.' + className).position().top;
         let elHeight = $('.' + className).outerHeight();
         let elBot = elTop + elHeight;
         let pageBot = pageTop + windowHeight;
 
-        if (className === 'about') {
-          console.log(elTop, pageTop);
-          console.log(elBot, pageBot);
-          console.log('-----------');
-        }
-  
-        if (elTop > pageTop) {
-          fadeIn(elTop, elHeight, pageTop, className);
+        if (elTop >= pageTop && elBot <= pageBot) {
+          // entire element is within page bounds
+          noFade(className);
         } else if (elTop <= pageTop && elBot >= pageBot) {
+          // element takes up entirety of viewport
           noFade(className);
         } else {
-          fadeOut(elBot, elHeight, pageBot, className);
+          // element is partially within viewport or none of the element is within the viewport
+          fade(elTop, elBot, elHeight, pageTop, pageBot, windowHeight, className);
         }
       }
     }
@@ -117,17 +113,16 @@ $(function () {
     }
   }
 
-  function fadeIn(elTop, elHeight, pageTop, className) {
-    if (className == 'about') {
-      console.log(elTop, pageTop);
+  function fade(elTop, elBot, elHeight, pageTop, pageBot, windowHeight, className) {
+    let viewRatio;
+    if (elHeight <= windowHeight) {
+      // element is smaller than the viewport
+      viewRatio = (elTop < pageTop) ? (elBot - pageTop) / elHeight : (pageBot - elTop) / elHeight;
+    } else {
+      // element is larget than the viewport
+      viewRatio = (elTop < pageTop) ? (elBot - pageTop) / windowHeight : (pageBot - elTop) / windowHeight;
     }
-    let opacity = 1 - (elTop - pageTop) / elHeight * 1.2;
-    setOpacity(className, opacity);
-  }
-
-  function fadeOut(elBot, elHeight, pageBot, className) {
-    let opacity = 1 - (pageBot - elBot) / elHeight * 1.2;
-    setOpacity(className, opacity);
+    setOpacity(className, viewRatio);
   }
 
   function noFade(className) {
@@ -136,7 +131,6 @@ $(function () {
 
   function setOpacity(className, opacity) {
     $('.' + className + 'Content').css('opacity', opacity);
-    // $('.' + className).css('opacity', opacity);
   }
 
   function checkLocalStorageForThemeSetting() {
