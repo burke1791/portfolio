@@ -89,3 +89,8 @@ hr {
 .contact {
   margin: 0;
 }
+
+.contactDetails {
+  margin-left: 10px;
+  margin-right: 10px;
+}
