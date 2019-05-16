@@ -71,23 +71,20 @@ $(function () {
   }
 
   function handleFadeEffects(pageTop, windowHeight) {
-    for (var className of fadeElementClasses) {
-      let elTop = $('.' + className).position().top;
-      let elHeight = $('.' + className).outerHeight();
-      let elBot = elTop + elHeight;
-      let pageBot = pageTop + windowHeight;
-
-      // if (className === 'skills') {
-      //   console.log(elBot, pageBot);
-      //   console.log(elHeight);
-      // }
-
-      if (elTop > pageTop) {
-        fadeIn(elTop, elHeight, pageTop, className);
-      } else if (elTop <= pageTop && elBot >= pageBot) {
-        noFade(className);
-      } else {
-        fadeOut(elBot, elHeight, pageBot, className);
+    if (window.location.pathname == '/index.html') {
+      for (var className of fadeElementClasses) {
+        let elTop = $('.' + className).position().top;
+        let elHeight = $('.' + className).outerHeight();
+        let elBot = elTop + elHeight;
+        let pageBot = pageTop + windowHeight;
+  
+        if (elTop > pageTop) {
+          fadeIn(elTop, elHeight, pageTop, className);
+        } else if (elTop <= pageTop && elBot >= pageBot) {
+          noFade(className);
+        } else {
+          fadeOut(elBot, elHeight, pageBot, className);
+        }
       }
     }
   }
