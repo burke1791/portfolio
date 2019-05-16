@@ -15,7 +15,35 @@
 
 <body class='light'>
 
-  
+  <div class='project'>
+    <div class='projectContent'>
+      <div class='projectTitle'>
+        <h2>College Basketball Calcutta Tournament</h2>
+      </div>
+      <div class='projectImg'>
+        <img src='assets/images/calcutta-react.png'>
+      </div>
+      <div class='projectDescription'>
+        <h3>Status: Complete - v0</h3>
+        <h3 class='projectDescriptionHeader'>Description</h3>
+        <p>
+          A fully functional site that can host your March Madness Calcutta tournament from hosting the live auction at
+          the start to calculating each user’s payout at the end. This app was built using ReactJS (before the
+          introduction of Hooks), React Router, and Bootstrap for the front end, and Google’s Firebase for the back end.
+        </p>
+        <p>
+          The front end utilizes a publisher subscriber data pattern to keep each component up to date with info from
+          the NoSQL database. Using the Firebase Authentication API, the app will only display the tournaments that the
+          user has created or joined, resulting in a personalized user experience.
+        </p>
+        <p>
+          In the future, I plan to rewrite this app from scratch using React v16.8+ to take advantage of the new Hooks
+          feature, as well as incorporate the Context API for state management. I will also look to improve the UI/UX
+          and functionality as a whole with everything I’ve learned since completing “version zero.”
+        </p>
+      </div>
+    </div>
+  </div>
 
   <nav class='topnav nav-light' id='topNavBar'>
     <ul class='topLeft'>
@@ -32,28 +60,32 @@
         </a>
       </li>
       <li class='rightNavItem'>
-        <a href='' class='rightNavLink jumpLink' id='aboutLink' data-scrollTo='aboutSection' data-scrollToResponsive='aboutSection'>
+        <a href='' class='rightNavLink jumpLink' id='aboutLink' data-scrollTo='aboutSection'
+          data-scrollToResponsive='aboutSection'>
           <img src='assets/images/home_light.png' data-state='light' data-light='assets/images/home_light.png'
             data-dark='assets/images/home_dark.png' class='navLinkIcon' id='aboutTopNav'>
           <b>About</b>
         </a>
       </li>
       <li class='rightNavItem'>
-        <a href='' class='rightNavLink jumpLink' id='skillsLink' data-scrollTo='skillsSection' data-scrollToResponsive='skillsResponsiveScroll'>
+        <a href='' class='rightNavLink jumpLink' id='skillsLink' data-scrollTo='skillsSection'
+          data-scrollToResponsive='skillsResponsiveScroll'>
           <img src='assets/images/skills_light.png' data-state='light' data-light='assets/images/skills_light.png'
             data-dark='assets/images/skills_dark.png' class='navLinkIcon' id='skillsTopNav'>
           <b>Skills</b>
         </a>
       </li>
       <li class='rightNavItem'>
-        <a href='' class='rightNavLink jumpLink' id='portfolioLink' data-scrollTo='portfolioSection' data-scrollToResponsive='portfolioResponsiveScroll'>
+        <a href='' class='rightNavLink jumpLink' id='portfolioLink' data-scrollTo='portfolioSection'
+          data-scrollToResponsive='portfolioResponsiveScroll'>
           <img src='assets/images/portfolio_light.png' data-state='light' data-light='assets/images/portfolio_light.png'
             data-dark='assets/images/portfolio_dark.png' class='navLinkIcon' id='portfolioTopNav'>
           <b>Portfolio</b>
         </a>
       </li>
       <li class='rightNavItem'>
-        <a href='' class='rightNavLink jumpLink' id='contactLink' data-scrollTo='contactSection' data-scrollToResponsive='contactResponsiveScroll'>
+        <a href='' class='rightNavLink jumpLink' id='contactLink' data-scrollTo='contactSection'
+          data-scrollToResponsive='contactResponsiveScroll'>
           <img src='assets/images/contact_light.png' data-state='light' data-light='assets/images/contact_light.png'
             data-dark='assets/images/contact_dark.png' class='navLinkIcon' id='contactTopNav'>
           <b>Contact</b>
