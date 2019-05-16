@@ -20,14 +20,14 @@ a {
 
 .light,
 .nav-dark {
-  background-color: #e7dbd8;
-  color: #130e52;
+  background-color: #ffffff;
+  color: #20232a;
 }
 
 .dark,
 .nav-light {
-  background-color: #130e52;
-  color: #e7dbd8;
+  background-color: #20232a;
+  color: #ffffff;
 }
 
 .desktop {
@@ -39,11 +39,11 @@ a {
 }
 
 button.light {
-  border: 1px solid #130e52;
+  border: 1px solid #20232a;
 }
 
 button.dark {
-  border: 1px solid #e7dbd8;
+  border: 1px solid #ffffff;
 }
 
 /* NAVBAR STYLES */
