@@ -101,6 +101,9 @@ $(function () {
     $('#topNavBar').addClass('nav-' + newState);
     $('#botNavBar').addClass('nav-' + newState);
 
+    $('#projectScreenShot').removeClass(oldState + 'Shadow');
+    $('#projectScreenShot').addClass(newState + 'Shadow');
+
     for (id of lightDarkImgElements) {
       var newSrc = $('#' + id).attr('data-' + newState);
       $('#' + id).attr('src', newSrc);

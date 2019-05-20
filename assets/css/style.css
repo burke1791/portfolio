@@ -320,6 +320,49 @@ button.jumpLink {
 }
 
 
+/* PROJECT PAGE */
+.project {
+  min-height: calc(100vh - 50px);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.project h2 {
+  font-size: 48px;
+}
+
+.project h3 {
+  font-size: 24px;
+}
+
+.project p {
+  line-height: 1.5;
+}
+
+.projectContent {
+  width: 60%;
+  margin: auto;
+}
+
+.projectImg img {
+  max-width: 100%;
+  height: auto;
+}
+
+.lightShadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.darkShadow {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.projectDescription {
+  text-align: left;
+  margin: 10px;
+}
+
+
 /* MEDIA QUERY HOVER EFFECTS */
 @media not all and (hover: none) {
   .topRight li:hover b,
