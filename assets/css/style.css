@@ -366,6 +366,15 @@ button.jumpLink {
   margin: 10px;
 }
 
+.liveLinks {
+  text-align: left;
+  margin: 10px;
+}
+
+.projectLink {
+  display: block;
+}
+
 
 /* MEDIA QUERY HOVER EFFECTS */
 @media not all and (hover: none) {
