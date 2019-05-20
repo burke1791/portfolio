@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel='stylesheet' href='assets/css/style.css'>
+
+  <link rel='stylesheet' media='(max-width: 599px)' href='assets/css/phone.css'>
+
+  <title>Chris Burke | Flockatime</title>
+</head>
+
+<body class='light'>
+
+  <div class='project'>
+    <div class='projectContent'>
+      <div class='projectTitle'>
+        <h2>Flockatime</h2>
+      </div>
+      <div class='projectImg'>
+        <img src='assets/images/flockatime.png' class='lightShadow' id='projectScreenShot'>
+      </div>
+      <div class='projectDescription'>
+        <h3><span class='underline'>Status:</span> Work In Progress</h3>
+        <h3 class='underline'>Description</h3>
+        <p>
+          This single page app is a high level clone of the popular WakaTime productivity tool.  The front end is built with ReactJS v16.8 and Bootstrap, while Google’s Firebase powers the back end - both authentication and database management.  The use of this app requires installation of the Visual Studio Code extension of the same name - <a href='https://marketplace.visualstudio.com/items?itemName=bootcamp-ballas.flockatime' target='_blank'>Flockatime</a>.  As you work in VS Code, the extension periodically sends timestamps attached to your unique identifier up the the NoSQL database, which the front end computes into human readable data.
+        </p>
+        <p>
+          Once you sign in, the app displays a bar chart visually representing the amount of time you spent coding over the past seven days, as well as a global leaderboard that shows every user with an account.
+        </p>
+        <p>
+          Future work will focus on diving deeper into everything React Hooks has to offer, as well as smoothing out the user experience.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <nav class='topnav nav-light' id='topNavBar'>
+    <ul class='topLeft'>
+      <li class='leftNavItem brand'>
+        <a href='index.html' class='brand desktop'><b>Chris Burke</b></a>
+        <a href='index.html' class='brand mobile'><b>CB</b></a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class='botnav nav-light' id='botNavBar'>
+    <ul class='botMid'>
+      <li class='botNavItem'>
+        <a href='https://www.linkedin.com/in/christopher-burke-1b6ba284/' target='_blank' class='botNavLink'>
+          <img src='assets/images/linkedin_dark.png' data-state='light' data-light='assets/images/linkedin_dark.png'
+            data-dark='assets/images/linkedin_light.png' class='navLinkIcon' id='linkedInBotNav'>
+          <b>LinkedIn</b>
+        </a>
+      </li>
+      <li class='botNavItem'>
+        <a href='https://github.com/burke1791' target='_blank' class='botNavLink'>
+          <img src='assets/images/github_dark.png' data-state='light' data-light='assets/images/github_dark.png'
+            data-dark='assets/images/github_light.png' class='navLinkIcon' id='githubBotNav'>
+          <b>GitHub</b>
+        </a>
+      </li>
+    </ul>
+    <ul class='botRight'>
+      <li class='botRightNavItem'>
+        <img src='assets/images/moon_light.png' data-state='light' data-light='assets/images/moon_light.png'
+          data-dark='assets/images/sun_dark.png' class='navLinkIcon' id='light-dark-toggle'>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src='./assets/js/scripts.js'></script>
+</body>
+
+</html>
