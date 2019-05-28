@@ -1,6 +1,6 @@
 $(function () {
   let fadeElementClasses = ['about', 'skills', 'portfolio', 'contact'];
-  let lightDarkIdentifiers = ['getInTouch', 'calcuttaBtn', 'hangmanBtn', 'flockaBtn']; // list of ids to toggle light/dark theme
+  let lightDarkIdentifiers = ['getInTouch', 'calcuttaBtn', 'hangmanBtn', 'flockaBtn', 'calcuttaLiveBtn', 'calcuttaGitHubBtn', 'flockaLiveBtn', 'flockaGitHubBtn', 'hangmanLiveBtn', 'hangmanGitHubBtn']; // list of ids to toggle light/dark theme
   let lightDarkImgElements = ['linkedInBotNav', 'light-dark-toggle', 'githubBotNav', 'linkedInAbout', 'githubAbout', 'aboutTopNav', 'skillsTopNav', 'portfolioTopNav', 'contactTopNav'];
   let lightDarkShadows = ['projectScreenShot', 'calcuttaLink', 'b1gHangmanLink', 'flockatimeLink', 'headshot'];
 

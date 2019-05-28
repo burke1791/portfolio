@@ -27,28 +27,47 @@
         <h3><span class='bold'>Status:</span> Work In Progress</h3>
         <h3 class='bold'>Description</h3>
         <p>
-          This single page app is a high level clone of the popular WakaTime productivity tool.  The front end is built with ReactJS v16.8 and Bootstrap, while Google’s Firebase powers the back end - both authentication and database management.  The use of this app requires installation of the Visual Studio Code extension of the same name - <a href='https://marketplace.visualstudio.com/items?itemName=bootcamp-ballas.flockatime' target='_blank'>Flockatime</a>.  As you work in VS Code, the extension periodically sends timestamps attached to your unique identifier up the the NoSQL database, which the front end computes into human readable data.
+          This single page app is a high level clone of the popular WakaTime productivity tool. The front end is built
+          with ReactJS v16.8 and Bootstrap, while Google’s Firebase powers the back end - both authentication and
+          database management. The use of this app requires installation of the Visual Studio Code extension of the same
+          name - <a href='https://marketplace.visualstudio.com/items?itemName=bootcamp-ballas.flockatime'
+            target='_blank'>Flockatime</a>. As you work in VS Code, the extension periodically sends timestamps attached
+          to your unique identifier up the the NoSQL database, which the front end computes into human readable data.
         </p>
         <p>
-          Once you sign in, the app displays a bar chart visually representing the amount of time you spent coding over the past seven days, as well as a global leaderboard that shows every user with an account.
+          Once you sign in, the app displays a bar chart visually representing the amount of time you spent coding over
+          the past seven days, as well as a global leaderboard that shows every user with an account.
         </p>
         <p>
-          Future work will focus on diving deeper into everything React Hooks has to offer, as well as smoothing out the user experience.
+          Future work will focus on diving deeper into everything React Hooks has to offer, as well as smoothing out the
+          user experience.
         </p>
 
         <h3 class='bold'>Motivation</h3>
         <p>
-          
+
         </p>
       </div>
       <div class='liveLinks'>
         <h3 class='bold'>Links</h3>
-        <p>
-          <a href='https://react.flockatime.com/' target='_blank' class='projectLink'>Live Site</a>
-        </p>
-        <p>
-          <a href='https://github.com/FlockaInc/Flocka-Time-React' target='_blank' class='projectLink'>GitHub Repo</a>
-        </p>
+        <div class='desktop'>
+          <p>
+            <a href='https://react.flockatime.com/' target='_blank' class='projectLink'>Live Site</a>
+          </p>
+        </div>
+        <div class='mobile'>
+          <button type='button' class='projectLinkBtn light' id='flockaLiveBtn'
+            onclick="location.href = 'https://react.flockatime.com/';">Live Site</button>
+        </div>
+        <div class='desktop'>
+          <p>
+            <a href='https://github.com/FlockaInc/Flocka-Time-React' target='_blank' class='projectLink'>GitHub Repo</a>
+          </p>
+        </div>
+        <div class='mobile'>
+          <button type='button' class='projectLinkBtn light' id='flockaGitHubBtn'
+            onclick="location.href = 'https://github.com/FlockaInc/Flocka-Time-React';">GitHub Repo</button>
+        </div>
       </div>
     </div>
   </div>
