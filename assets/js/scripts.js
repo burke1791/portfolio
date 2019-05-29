@@ -1,33 +1,39 @@
 $(function () {
   let fadeElementClasses = ['about', 'skills', 'portfolio', 'contact'];
-  let lightDarkIdentifiers = ['getInTouch', 'calcuttaBtn', 'hangmanBtn', 'flockaBtn']; // list of ids to toggle light/dark theme
+  let lightDarkIdentifiers = ['getInTouch', 'calcuttaBtn', 'hangmanBtn', 'flockaBtn', 'calcuttaLiveBtn', 'calcuttaGitHubBtn', 'flockaLiveBtn', 'flockaGitHubBtn', 'hangmanLiveBtn', 'hangmanGitHubBtn']; // list of ids to toggle light/dark theme
   let lightDarkImgElements = ['linkedInBotNav', 'light-dark-toggle', 'githubBotNav', 'linkedInAbout', 'githubAbout', 'aboutTopNav', 'skillsTopNav', 'portfolioTopNav', 'contactTopNav'];
-  let lightDarkShadows = ['projectScreenShot', 'calcuttaLink', 'b1gHangmanLink', 'flockatimeLink'];
+  let lightDarkShadows = ['projectScreenShot', 'calcuttaLink', 'b1gHangmanLink', 'flockatimeLink', 'headshot'];
 
   $('.jumpLink').click(function (event) {
     console.log('clicked link');
     event.preventDefault();
-
+    
     if ($(window).width() < 600) {
       var targetId = $(this).attr('data-scrollToResponsive');
       var target = $('#' + targetId);
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 0);
+      let currentTop = $(window).scrollTop();
+      let targetTop = target.position().top;
+
+      console.log('top diff:', currentTop - targetTop);
+      let offset = currentTop - targetTop > 0 ? 50 : 0;
+
+      if (targetId == 'contactResponsiveScroll') {
+        offset = 50;
+      }
+
+      scrollAnimation(target, offset);
     } else {
       var targetId = $(this).attr('data-scrollTo');
       var target = $('#' + targetId);
-      $('html, body').animate({
-        scrollTop: target.offset().top - 50
-      }, 0);
+      scrollAnimation(target, 50);
     }
-
-    var target = $('#' + targetId);
-
-    $('html, body').animate({
-      scrollTop: target.offset().top - 50
-    }, 0);
   });
+
+  function scrollAnimation(target, offset) {
+    $('html, body').animate({
+      scrollTop: target.offset().top - offset
+    }, 0);
+  }
 
   $('#light-dark-toggle').click(function () {
     var state = $(this).attr('data-state');

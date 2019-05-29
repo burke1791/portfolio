@@ -41,14 +41,39 @@
           feature, as well as incorporate the Context API for state management. I will also look to improve the UI/UX
           and functionality as a whole with everything I’ve learned since completing “version zero.”
         </p>
+
+        <h3 class='bold'>Motivation</h3>
+        <p>
+          I created this app because I couldn't find another site out there that kept track of a Calcutta tournament
+          from start to finish. Before I created this website, we were stuck doing a live auction via Skype and then
+          keeping track of everything in a Google Spreadsheet.
+        </p>
+        <p>
+          Now that we use this app, everything about the tournament experience is much smoother. The auction can handle
+          any number of simultaneous bids without error, and back end cloud functions keep the dollar values up to date
+          as the games end.
+        </p>
       </div>
       <div class='liveLinks'>
-        <p>
-          <a href='' target='_blank' class='projectLink'>Live Site</a>
-        </p>
-        <p>
-          <a href='' target='_blank' class='projectLink'>GitHub Repo</a>
-        </p>
+        <h3 class='bold desktop'>Links</h3>
+        <div class='desktop'>
+          <p>
+            <a href='https://calcutta-eb6eb.firebaseapp.com/' target='_blank' class='projectLink'>Live Site</a>
+          </p>
+        </div>
+        <div class='mobile'>
+          <button type='button' class='projectLinkBtn light' id='calcuttaLiveBtn'
+            onclick="location.href = 'https://calcutta-eb6eb.firebaseapp.com/';">Live Site</button>
+        </div>
+        <div class='desktop'>
+          <p>
+            <a href='https://github.com/burke1791/calcutta-react' target='_blank' class='projectLink'>GitHub Repo</a>
+          </p>
+        </div>
+        <div class='mobile'>
+          <button type='button' class='projectLinkBtn light' id='calcuttaGitHubBtn'
+            onclick="location.href = 'https://github.com/burke1791/calcutta-react';">GitHub Repo</button>
+        </div>
       </div>
     </div>
   </div>

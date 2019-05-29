@@ -17,20 +17,23 @@
 
   <div class='about' id='aboutSection'>
     <div class='aboutContent' id='aboutResponsiveScroll'>
+      <div class='profileImgContainer'>
+        <img src='assets/images/profile.jpg' class='profileImg darkShadow' id='headshot'>
+      </div>
       <div class='name'>
         <h1>Chris Burke</h1>
       </div>
       <div class='socialIcons'>
         <div class='social'>
-          <a href='https://www.linkedin.com/in/christopher-burke-1b6ba284/' target='_blank' class='socialLink'>
-            <img src='assets/images/linkedin_light.png' data-state='light' data-light='assets/images/linkedin_light.png'
-              data-dark='assets/images/linkedin_dark.png' class='socialLinkIcon' id='linkedInAbout'>
-          </a>
-        </div>
-        <div class='social'>
           <a href='https://github.com/burke1791' target='_blank' class='socialLink'>
             <img src='assets/images/github_light.png' data-state='light' data-light='assets/images/github_light.png'
               data-dark='assets/images/github_dark.png' class='socialLinkIcon' id='githubAbout'>
+          </a>
+        </div>
+        <div class='social'>
+          <a href='https://www.linkedin.com/in/christopher-burke-1b6ba284/' target='_blank' class='socialLink'>
+            <img src='assets/images/linkedin_light.png' data-state='light' data-light='assets/images/linkedin_light.png'
+              data-dark='assets/images/linkedin_dark.png' class='socialLinkIcon' id='linkedInAbout'>
           </a>
         </div>
       </div>
@@ -39,7 +42,8 @@
         <h3>ReactJS</h3>
       </div>
       <div class='contactJump'>
-        <button type='button' class='jumpLink light' id='getInTouch' data-scrollTo='contactSection' data-scrollToResponsive='contactResponsiveScroll'>Get in
+        <button type='button' class='jumpLink light' id='getInTouch' data-scrollTo='contactSection'
+          data-scrollToResponsive='contactResponsiveScroll'>Get in
           touch!</button>
       </div>
     </div>
@@ -111,21 +115,7 @@
               <span class='portfolioItemText'>College Basketball Calcutta Tournament</span>
             </div>
             <div class='portfolioItemDetails mobile'>
-              <button type='button' class='portfolioBtn light' id='calcuttaBtn' onclick="location.href = 'calcutta.html';">College Basketball Calcutta Tournament</button>
-            </div>
-          </a>
-          <div class='mobile divider'>
-            <hr>
-          </div>
-        </div>
-        <div class='portfolioItemContainer'>
-          <a href='b1g-hangman.html' class='portfolioItemLink lightShadow' id='b1gHangmanLink'>
-            <img src='assets/images/B1G_hangman.png' class='portfolioItemImg'>
-            <div class='portfolioItemImgOverlay'>
-              <span class='portfolioItemText'>Big Ten Hangman Game</span>
-            </div>
-            <div class='portfolioItemDetails mobile'>
-                <button type='button' class='portfolioBtn light' id='hangmanBtn' onclick="location.href = 'calcutta.html';">Big Ten Hangman</button>
+              <button type='button' class='portfolioBtn light' id='calcuttaBtn'>College Basketball Calcutta Tournament</button>
             </div>
           </a>
           <div class='mobile divider'>
@@ -139,7 +129,21 @@
               <span class='portfolioItemText'>Flockatime</span>
             </div>
             <div class='portfolioItemDetails mobile'>
-                <button type='button' class='portfolioBtn light' id='flockaBtn' onclick="location.href = 'calcutta.html';">Flockatime</button>
+              <button type='button' class='portfolioBtn light' id='flockaBtn'>Flockatime</button>
+            </div>
+          </a>
+          <div class='mobile divider'>
+            <hr>
+          </div>
+        </div>
+        <div class='portfolioItemContainer'>
+          <a href='b1g-hangman.html' class='portfolioItemLink lightShadow' id='b1gHangmanLink'>
+            <img src='assets/images/B1G_hangman.png' class='portfolioItemImg'>
+            <div class='portfolioItemImgOverlay'>
+              <span class='portfolioItemText'>Big Ten Hangman Game</span>
+            </div>
+            <div class='portfolioItemDetails mobile'>
+              <button type='button' class='portfolioBtn light' id='hangmanBtn'>Big Ten Hangman</button>
             </div>
           </a>
         </div>
@@ -156,8 +160,8 @@
         <h3>Please contact me using the email below and I will get back to you as soon as possible.</h3>
       </div>
       <div class='emailLink'>
-        <a href='mailto:burke1791@gmail.com?Subject=Hello'>
-          <h3>burke1791@gmail.com</h3>
+        <a href='mailto:contact@chrisburke.dev?Subject=Hello'>
+          <h3>contact@chrisburke.dev</h3>
         </a>
       </div>
     </div>
@@ -178,28 +182,32 @@
         </a>
       </li>
       <li class='rightNavItem'>
-        <a href='' class='rightNavLink jumpLink' id='aboutLink' data-scrollTo='aboutSection' data-scrollToResponsive='aboutSection'>
+        <a href='' class='rightNavLink jumpLink' id='aboutLink' data-scrollTo='aboutSection'
+          data-scrollToResponsive='aboutSection'>
           <img src='assets/images/home_light.png' data-state='light' data-light='assets/images/home_light.png'
             data-dark='assets/images/home_dark.png' class='navLinkIcon' id='aboutTopNav'>
           <b>About</b>
         </a>
       </li>
       <li class='rightNavItem'>
-        <a href='' class='rightNavLink jumpLink' id='skillsLink' data-scrollTo='skillsSection' data-scrollToResponsive='skillsResponsiveScroll'>
+        <a href='' class='rightNavLink jumpLink' id='skillsLink' data-scrollTo='skillsSection'
+          data-scrollToResponsive='skillsResponsiveScroll'>
           <img src='assets/images/skills_light.png' data-state='light' data-light='assets/images/skills_light.png'
             data-dark='assets/images/skills_dark.png' class='navLinkIcon' id='skillsTopNav'>
           <b>Skills</b>
         </a>
       </li>
       <li class='rightNavItem'>
-        <a href='' class='rightNavLink jumpLink' id='portfolioLink' data-scrollTo='portfolioSection' data-scrollToResponsive='portfolioResponsiveScroll'>
+        <a href='' class='rightNavLink jumpLink' id='portfolioLink' data-scrollTo='portfolioSection'
+          data-scrollToResponsive='portfolioResponsiveScroll'>
           <img src='assets/images/portfolio_light.png' data-state='light' data-light='assets/images/portfolio_light.png'
             data-dark='assets/images/portfolio_dark.png' class='navLinkIcon' id='portfolioTopNav'>
           <b>Portfolio</b>
         </a>
       </li>
       <li class='rightNavItem'>
-        <a href='' class='rightNavLink jumpLink' id='contactLink' data-scrollTo='contactSection' data-scrollToResponsive='contactResponsiveScroll'>
+        <a href='' class='rightNavLink jumpLink' id='contactLink' data-scrollTo='contactSection'
+          data-scrollToResponsive='contactResponsiveScroll'>
           <img src='assets/images/contact_light.png' data-state='light' data-light='assets/images/contact_light.png'
             data-dark='assets/images/contact_dark.png' class='navLinkIcon' id='contactTopNav'>
           <b>Contact</b>
@@ -211,17 +219,17 @@
   <nav class='botnav nav-light' id='botNavBar'>
     <ul class='botMid'>
       <li class='botNavItem'>
-        <a href='https://www.linkedin.com/in/christopher-burke-1b6ba284/' target='_blank' class='botNavLink'>
-          <img src='assets/images/linkedin_dark.png' data-state='light' data-light='assets/images/linkedin_dark.png'
-            data-dark='assets/images/linkedin_light.png' class='navLinkIcon' id='linkedInBotNav'>
-          <b>LinkedIn</b>
-        </a>
-      </li>
-      <li class='botNavItem'>
         <a href='https://github.com/burke1791' target='_blank' class='botNavLink'>
           <img src='assets/images/github_dark.png' data-state='light' data-light='assets/images/github_dark.png'
             data-dark='assets/images/github_light.png' class='navLinkIcon' id='githubBotNav'>
           <b>GitHub</b>
+        </a>
+      </li>
+      <li class='botNavItem'>
+        <a href='https://www.linkedin.com/in/christopher-burke-1b6ba284/' target='_blank' class='botNavLink'>
+          <img src='assets/images/linkedin_dark.png' data-state='light' data-light='assets/images/linkedin_dark.png'
+            data-dark='assets/images/linkedin_light.png' class='navLinkIcon' id='linkedInBotNav'>
+          <b>LinkedIn</b>
         </a>
       </li>
     </ul>

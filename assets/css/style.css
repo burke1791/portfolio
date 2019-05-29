@@ -152,9 +152,14 @@ nav > ul > li {
 .portfolio,
 .contact {
   min-height: calc(100vh - 100px);
-  padding: 75px 0;
-  /* height: calc(100vh - 100px); */
+  /* padding: 75px 0; */
+  padding: 15px 0;
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .name h1,
@@ -163,16 +168,6 @@ nav > ul > li {
 .contactTitle h1 {
   font-size: 64px;
   margin: 10px;
-}
-
-.about,
-.skills,
-.portfolio,
-.contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 
 .aboutContent,
@@ -191,6 +186,19 @@ nav > ul > li {
 /* ABOUT STYLES */
 .about {
   margin-top: 50px;
+}
+
+.profileImgContainer {
+  max-width: 512px;
+  max-height: 512px;
+  width: 80%;
+}
+
+.profileImg {
+  max-width: 512px;
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
 }
 
 .socialIcons {
