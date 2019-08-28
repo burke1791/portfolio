@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel='stylesheet' href='assets/css/style.css'>
+
+  <link rel='stylesheet' media='(max-width: 599px)' href='assets/css/phone.css'>
+
+  <title>Chris Burke | Calcutta League</title>
+</head>
+
+<body class='light'>
+
+  <div class='project'>
+    <div class='projectContent'>
+      <div class='projectTitle'>
+        <h2>March Madness Calcutta Tournament</h2>
+      </div>
+      <div class='projectImg'>
+        <img src='assets/images/calcutta_league.png' class='lightShadow' id='projectScreenShot'>
+      </div>
+      <div class='projectDescription'>
+        <h3><span class='bold'>Status:</span> Work In Progress</h3>
+        <h3 class='bold'>Description</h3>
+        <p>
+          A fully functional site that can host your March Madness Calcutta tournament from hosting the live auction at
+          the start to calculating each user’s payout at the end. This app was built using ReactJS with Hooks, Reach Router, and Ant Design Styled Components for the front end, and MySQL combined with Google’s Firebase for the back end.
+        </p>
+        <p>
+          The front end utilizes a publisher subscriber data pattern to keep each component up to date with info from
+          the databases. Using the Firebase Authentication API, the app will only display the tournaments that the
+          user has created or joined, resulting in a personalized user experience.
+        </p>
+        <p>
+          Development is ongoing with many new features on the way, including more options to socially interact with your friends and a number of data visualization options for the auction results and your teams' performance.
+        </p>
+
+        <h3 class='bold'>Motivation</h3>
+        <p>
+          I created this app because I couldn't find another site out there that kept track of a Calcutta tournament
+          from start to finish. Before I created this website, we were stuck doing a live auction via Skype and then
+          keeping track of everything in a Google Spreadsheet.
+        </p>
+        <p>
+          Now that we use this app, everything about the tournament experience is much smoother. The auction can handle
+          any number of simultaneous bids without error, and back end cloud functions keep the dollar values up to date
+          as the games end.
+        </p>
+      </div>
+      <div class='liveLinks'>
+        <h3 class='bold desktop'>Links</h3>
+        <div class='desktop'>
+          <p>
+            <a href='https://www.calcuttaleague.com' target='_blank' class='projectLink'>Live Site</a>
+          </p>
+        </div>
+        <div class='mobile'>
+          <button type='button' class='projectLinkBtn light' id='calcuttaLiveBtn'
+            onclick="location.href = 'https://www.calcuttaleague.com/';">Live Site</button>
+        </div>
+        <div class='desktop'>
+          <p>
+            <a href='https://github.com/burke1791/calcutta-league' target='_blank' class='projectLink'>GitHub Repo</a>
+          </p>
+        </div>
+        <div class='mobile'>
+          <button type='button' class='projectLinkBtn light' id='calcuttaGitHubBtn'
+            onclick="location.href = 'https://github.com/burke1791/calcutta-league';">GitHub Repo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class='topnav nav-light' id='topNavBar'>
+    <ul class='topLeft'>
+      <li class='leftNavItem brand'>
+        <a href='index.html' class='brand desktop'><b>Chris Burke</b></a>
+        <a href='index.html' class='brand mobile'><b>CB</b></a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class='botnav nav-light' id='botNavBar'>
+    <ul class='botMid'>
+      <li class='botNavItem'>
+        <a href='https://www.linkedin.com/in/christopher-burke-1b6ba284/' target='_blank' class='botNavLink'>
+          <img src='assets/images/linkedin_dark.png' data-state='light' data-light='assets/images/linkedin_dark.png'
+            data-dark='assets/images/linkedin_light.png' class='navLinkIcon' id='linkedInBotNav'>
+          <b>LinkedIn</b>
+        </a>
+      </li>
+      <li class='botNavItem'>
+        <a href='https://github.com/burke1791' target='_blank' class='botNavLink'>
+          <img src='assets/images/github_dark.png' data-state='light' data-light='assets/images/github_dark.png'
+            data-dark='assets/images/github_light.png' class='navLinkIcon' id='githubBotNav'>
+          <b>GitHub</b>
+        </a>
+      </li>
+    </ul>
+    <ul class='botRight'>
+      <li class='botRightNavItem'>
+        <img src='assets/images/moon_light.png' data-state='light' data-light='assets/images/moon_light.png'
+          data-dark='assets/images/sun_dark.png' class='navLinkIcon' id='light-dark-toggle'>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src='./assets/js/scripts.js'></script>
+</body>
+
+</html>
